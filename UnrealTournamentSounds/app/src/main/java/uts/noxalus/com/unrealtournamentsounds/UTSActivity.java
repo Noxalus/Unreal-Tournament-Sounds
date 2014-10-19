@@ -15,8 +15,6 @@ public class UTSActivity extends Activity {
 
     private int[] _soundsResources;
     private String[] _soundsTitles;
-
-    // Current sound
     private int _currentPosition;
 
     @Override
@@ -63,6 +61,8 @@ public class UTSActivity extends Activity {
                 SetSoundAsDialogFragment dialog = new SetSoundAsDialogFragment(
                         adapter.context, _soundsResources[pos], _soundsTitles[pos]);
 
+                dialog.setArguments(new Bundle());
+
                 FragmentManager fm = getFragmentManager();
 
                 dialog.show(fm, "SET_SOUND_AS");
@@ -89,16 +89,18 @@ public class UTSActivity extends Activity {
                         // We don't forget to release it !
                         mp.release();
 
+                        /*
                         // Share with social networks
                         SharedPreferences pref = getSharedPreferences("shared_preferences", MODE_PRIVATE);
                         int shareTypeId = pref.getInt("SHARE_TYPE", -1);
                         if (shareTypeId > -1)
                         {
                             String name = _soundsTitles[_currentPosition];
-                            String subject = "[AoE2][Provoc] Devine ce que j'ai écouté ?";
-                            String content = "J'ai écouté le son \"" + name + "\" à l'aide de l'application \"Age of Empires 2 Provocations\" !";
+                            String subject = "[UTS] Guess what I've just listened?";
+                            String content = "The sound \"" + name + "\" thanks to the \"Unreal Tournament Sounds\" application! #UnrealTournamentSounds";
                             //shareIntent(ShareTypes[shareTypeId], subject, content);
                         }
+                        */
                     };
                 });
             }
