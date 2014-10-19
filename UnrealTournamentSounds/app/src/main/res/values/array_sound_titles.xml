@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_sound_titles">
+        <item>Head Shot!!</item>
+        <item>First Blood</item>
+        <item>Double Kill!</item>
+        <item>Multi Kill!</item>
+        <item>ULTRA KILL!!</item>
+        <item>MONSTER KILL!!!</item>
+
+        <item>Killing Spree!</item>
+        <item>Rampage!</item>
+        <item>Dominating!</item>
+        <item>Unstoppable!</item>
+        <item>Godlike!</item>
+
+        <item>You have lost the match!</item>
+
+        <item>[Flag taken]</item>
+        <item>[Armor pick up]</item>
+        <item>[Ammo pick up]</item>
+        <item>[Player respawn]</item>
+        <item>[Item respawn]</item>
+        <item>[Sniper fire]</item>
+
+    </string-array>
+</resources>

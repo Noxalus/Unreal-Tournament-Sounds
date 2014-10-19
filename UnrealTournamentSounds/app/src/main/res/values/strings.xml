@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Unreal Tournament Sounds</string>
+    <string name="action_settings">Settings</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="set_as_dialog_title">Add as</string>
+    <string name="sound_as_ringtone">has been added as a ringtone!</string>
+    <string name="sound_as_notification">has been added as a notification!</string>
+</resources>
