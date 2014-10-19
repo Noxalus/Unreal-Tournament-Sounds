@@ -11,6 +11,7 @@ import android.content.res.AssetFileDescriptor;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.Gravity;
@@ -104,12 +105,12 @@ public class SetSoundAsDialogFragment extends DialogFragment {
 
     // Copy the sound file into internal memory
     public void setSoundAs(int type) {
-        String basePath = "/sdcard/Media/Audio/Ringtones/";
+        String basePath = Environment.getExternalStorageDirectory().getPath() + R.string.ringtone_directory_path;
 
         if (type == RingtoneManager.TYPE_NOTIFICATION)
-            basePath = "/sdcard/Media/Audio/Notifications/";
+            basePath = Environment.getExternalStorageDirectory().getPath() + R.string.notification_directory_path;
 
-        String fileName = _context.getResources().getResourceEntryName(_resource) + ".wav";
+        String fileName = _context.getResources().getResourceEntryName(_resource) + "." + R.string.file_extension;
 
         File file = new File(basePath, fileName);
         File baseDirectory = file.getParentFile();

@@ -8,4 +8,8 @@
     <string name="set_as_dialog_title">Add as</string>
     <string name="sound_as_ringtone">has been added as a ringtone!</string>
     <string name="sound_as_notification">has been added as a notification!</string>
+
+    <string name="ringtone_directory_path">Media/Audio/Ringtones/</string>
+    <string name="notification_directory_path">Media/Audio/Notifications/</string>
+    <string name="file_extension">wav</string>
 </resources>
