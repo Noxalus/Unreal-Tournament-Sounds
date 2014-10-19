@@ -58,10 +58,14 @@ public class UTSActivity extends Activity {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int pos, long l) {
                 CustomAdapter adapter = (CustomAdapter) adapterView.getAdapter();
-                SetSoundAsDialogFragment dialog = new SetSoundAsDialogFragment(
-                        adapter.context, _soundsResources[pos], _soundsTitles[pos]);
 
-                dialog.setArguments(new Bundle());
+                SetSoundAsDialogFragment dialog = new SetSoundAsDialogFragment();
+
+                Bundle bundle = new Bundle();
+                bundle.putInt("resource", _soundsResources[pos]);
+                bundle.putString("name", _soundsTitles[pos]);
+
+                dialog.setArguments(bundle);
 
                 FragmentManager fm = getFragmentManager();
 

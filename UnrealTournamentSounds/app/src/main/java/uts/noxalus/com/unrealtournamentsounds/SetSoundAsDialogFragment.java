@@ -36,15 +36,18 @@ public class SetSoundAsDialogFragment extends DialogFragment {
     private int _resource;
     private String _name;
 
-    public SetSoundAsDialogFragment(Context context, int resource, String name)
+    public SetSoundAsDialogFragment()
     {
-        _context = context;
-        _resource = resource;
-        _name = name;
     }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
+        super.onCreateDialog(savedInstanceState);
+
+        _context = getActivity().getApplicationContext();
+        _resource = getArguments().getInt("resource");
+        _name = getArguments().getString("name");
+
         _selectedItems = new ArrayList();  // Where we track the selected items
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         // Set the dialog title
